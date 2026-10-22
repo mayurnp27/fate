@@ -1,0 +1,131 @@
+{
+  "leadCount": 50000,
+  "offerCount": 100,
+  "nicheCount": 25,
+  "cycleCount": 5,
+  "winners": 62,
+  "averageConversionLift": 0.039181953882849195,
+  "totalGrossProfitDelta": 939510.9097993164,
+  "top": [
+    {
+      "name": "Cybersecurity: Flexible launch financing",
+      "niche": "Cybersecurity",
+      "icp": "CISO at regulated mid-market companies",
+      "cycle": "Mid-market consultative",
+      "stage": "Business case",
+      "leads": 28,
+      "conversionDelta": 0.07142857142857145,
+      "revenueDelta": 150372.25,
+      "grossProfitDelta": 103663.17777238844,
+      "confidence": 34
+    },
+    {
+      "name": "Healthtech: Flexible launch financing",
+      "niche": "Healthtech",
+      "icp": "Operations leader at multi-site clinics",
+      "cycle": "Transactional velocity",
+      "stage": "Offer viewed",
+      "leads": 27,
+      "conversionDelta": 0.07407407407407407,
+      "revenueDelta": 117550,
+      "grossProfitDelta": 66931.14113707968,
+      "confidence": 33
+    },
+    {
+      "name": "Manufacturing technology: Flexible launch financing",
+      "niche": "Manufacturing technology",
+      "icp": "Plant leader at a 100–1,000 employee manufacturer",
+      "cycle": "Transactional velocity",
+      "stage": "Contacted",
+      "leads": 29,
+      "conversionDelta": 0.034482758620689655,
+      "revenueDelta": 78876,
+      "grossProfitDelta": 38235.10523290513,
+      "confidence": 29
+    },
+    {
+      "name": "Marketing technology: Risk-free outcome pilot",
+      "niche": "Marketing technology",
+      "icp": "Demand generation leader at growth-stage companies",
+      "cycle": "Transactional velocity",
+      "stage": "Checkout",
+      "leads": 14,
+      "conversionDelta": 0.1428571428571429,
+      "revenueDelta": 51342.76250000001,
+      "grossProfitDelta": 35652.814161547576,
+      "confidence": 32
+    },
+    {
+      "name": "Manufacturing technology: ICP activation incentive",
+      "niche": "Manufacturing technology",
+      "icp": "Plant leader at a 100–1,000 employee manufacturer",
+      "cycle": "Partner-led",
+      "stage": "Joint discovery",
+      "leads": 19,
+      "conversionDelta": 0.05263157894736842,
+      "revenueDelta": 54421.13500000001,
+      "grossProfitDelta": 32055.075246772423,
+      "confidence": 26
+    },
+    {
+      "name": "Healthtech: ICP activation incentive",
+      "niche": "Healthtech",
+      "icp": "Operations leader at multi-site clinics",
+      "cycle": "Partner-led",
+      "stage": "Commercial review",
+      "leads": 14,
+      "conversionDelta": 0.07142857142857142,
+      "revenueDelta": 44046.01000000001,
+      "grossProfitDelta": 30607.138016219236,
+      "confidence": 25
+    },
+    {
+      "name": "HR technology: Flexible launch financing",
+      "niche": "HR technology",
+      "icp": "Chief People Officer at distributed companies",
+      "cycle": "SMB inbound",
+      "stage": "Discovery",
+      "leads": 27,
+      "conversionDelta": 0.037037037037037035,
+      "revenueDelta": 42370.5,
+      "grossProfitDelta": 29201.373595712837,
+      "confidence": 27
+    },
+    {
+      "name": "Legal technology: Flexible launch financing",
+      "niche": "Legal technology",
+      "icp": "Managing partner at 20–200 attorney firms",
+      "cycle": "Enterprise multi-threaded",
+      "stage": "Executive alignment",
+      "leads": 23,
+      "conversionDelta": 0.043478260869565216,
+      "revenueDelta": 44067,
+      "grossProfitDelta": 27971.829950206535,
+      "confidence": 29
+    },
+    {
+      "name": "Property technology: Done-with-you implementation bundle",
+      "niche": "Property technology",
+      "icp": "Portfolio operator managing 500+ units",
+      "cycle": "SMB inbound",
+      "stage": "Proposal",
+      "leads": 14,
+      "conversionDelta": 0.07142857142857142,
+      "revenueDelta": 44276.90666666668,
+      "grossProfitDelta": 26982.50123785375,
+      "confidence": 26
+    },
+    {
+      "name": "Recruitment services: Flexible launch financing",
+      "niche": "Recruitment services",
+      "icp": "Talent leader filling 10+ specialist roles annually",
+      "cycle": "Mid-market consultative",
+      "stage": "Business case",
+      "leads": 26,
+      "conversionDelta": 0.07692307692307693,
+      "revenueDelta": 66261.71428571432,
+      "grossProfitDelta": 26619.160791278962,
+      "confidence": 33
+    }
+  ]
+}

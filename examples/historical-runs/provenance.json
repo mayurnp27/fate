@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "description": "Recovered original benchmark summaries. Source chat identifiers are provenance pointers; source conversations are not included.",
+  "runs": [
+    {
+      "file": "records-50000.json",
+      "sourceKind": "recorded-command-output",
+      "sourceChatId": "01a04a95-4efc-7a83-ad92-b2cc2afa0d9a",
+      "sourceTurnId": "01a04aaa-9849-7c11-8db0-e15eb21a5942",
+      "sourceItemId": "exec-874833c3-4a99-46d3-a39e-0545ffd0cab2",
+      "sourceTurnStartedAt": "2026-08-28T23:18:09.000Z",
+      "sourceTurnCompletedAt": "2026-08-28T23:28:47.000Z",
+      "dataKind": "synthetic",
+      "scope": "aggregate metrics and top-ranked scenarios only",
+      "fullRunSnapshotsRecovered": false,
+      "rerun": false
+    },
+    {
+      "file": "conversations-3600.json",
+      "sourceKind": "recorded-command-output",
+      "sourceChatId": "01a04a95-4efc-7a83-ad92-b2cc2afa0d9a",
+      "sourceTurnId": "01a04abd-365b-7291-aac9-beed7f6cdd28",
+      "sourceItemId": "exec-ee91008f-3fee-490d-84b3-3adf63291987",
+      "sourceTurnStartedAt": "2026-08-28T23:38:29.000Z",
+      "sourceTurnCompletedAt": "2026-08-28T23:44:43.000Z",
+      "dataKind": "synthetic",
+      "scope": "aggregate metrics and top-ranked scenarios only",
+      "fullRunSnapshotsRecovered": false,
+      "rerun": false
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "conversationCount": 3600,
+  "winners": 89,
+  "averageConversionLift": 0.044166666666666625,
+  "totalGrossProfitDelta": 2080404.5287882318,
+  "top": [
+    {
+      "name": "Cybersecurity: Flexible launch financing",
+      "cycle": "Mid-market consultative",
+      "stage": "Business case",
+      "leads": 36,
+      "lift": 0.05555555555555555,
+      "gp": 111079.43406569096,
+      "confidence": {
+        "score": 35,
+        "label": "Low",
+        "reasons": [
+          "36 historical leads match the selected population.",
+          "7 observed conversions anchor the baseline.",
+          "100% of leads have an explicit behavioral signal."
+        ]
+      }
+    },
+    {
+      "name": "Manufacturing technology: ICP activation incentive",
+      "cycle": "Partner-led",
+      "stage": "Joint discovery",
+      "leads": 36,
+      "lift": 0.08333333333333331,
+      "gp": 90408.145262932,
+      "confidence": {
+        "score": 38,
+        "label": "Low",
+        "reasons": [
+          "36 historical leads match the selected population.",
+          "10 observed conversions anchor the baseline.",
+          "100% of leads have an explicit behavioral signal."
+        ]
+      }
+    },
+    {
+      "name": "Healthtech: ICP activation incentive",
+      "cycle": "Partner-led",
+      "stage": "Commercial review",
+      "leads": 36,
+      "lift": 0.08333333333333337,
+      "gp": 86591.85071452288,
+      "confidence": {
+        "score": 36,
+        "label": "Low",
+        "reasons": [
+          "36 historical leads match the selected population.",
+          "8 observed conversions anchor the baseline.",
+          "100% of leads have an explicit behavioral signal."
+        ]
+      }
+    },
+    {
+      "name": "RevOps SaaS: ICP activation incentive",
+      "cycle": "Transactional velocity",
+      "stage": "Checkout",
+      "leads": 36,
+      "lift": 0.1111111111111111,
+      "gp": 67439.84751801396,
+      "confidence": {
+        "score": 43,
+        "label": "Low",
+        "reasons": [
+          "36 historical leads match the selected population.",
+          "14 observed conversions anchor the baseline.",
+          "100% of leads have an explicit behavioral signal."
+        ]
+      }
+    },
+    {
+      "name": "HR technology: Risk-free outcome pilot",
+      "cycle": "Transactional velocity",
+      "stage": "Offer viewed",
+      "leads": 36,
+      "lift": 0.08333333333333337,
+      "gp": 62052.58102968737,
+      "confidence": {
+        "score": 40,
+        "label": "Low",
+        "reasons": [
+          "36 historical leads match the selected population.",
+          "12 observed conversions anchor the baseline.",
+          "100% of leads have an explicit behavioral signal."
+        ]
+      }
+    }
+  ]
+}

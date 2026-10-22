@@ -33,6 +33,10 @@ The server listens on `127.0.0.1`. Set `PORT=3001 npm start` to change its port.
 
 The website's aggregate slider demo is a separate illustrative model. The workbench calls the record-level engine through the API; results from those two interfaces are not expected to match. Introductory website cards are illustrative examples, not outputs from your imported data.
 
+## Historical simulation results
+
+Two original synthetic benchmark outputs from August 28, 2026 are preserved in [examples/historical-runs](examples/historical-runs/README.md): the 50,000-record benchmark and the 3,600-conversation benchmark. They include the original aggregate metrics and top-ranked offers, with provenance and recovery limits. These are recovered historical outputs, not new simulations or real-customer results.
+
 ## API
 
 | Method | Path | Purpose |
