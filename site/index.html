@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fate — Test revenue decisions before you make them</title>
+  <meta name="description" content="Evidence describes what happened. Fate estimates what could happen. fate turns real sales behaviour, outcomes and economics into scenario estimates for pricing, offers, follow-up and sales process — with ranges, assumptions and evidence, not false certainty.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fate">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Fate — Test revenue decisions before you make them">
+  <meta property="og:description" content="Evidence describes what happened. Fate estimates what could happen. A revenue decision system built on evidence, ranges and honest uncertainty.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fate — Test revenue decisions before you make them">
+  <meta name="twitter:description" content="Evidence describes what happened. Fate estimates what could happen. A revenue decision system built on evidence, ranges and honest uncertainty.">
+  <meta name="theme-color" content="#06070b">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./os.css">
+  <link rel="stylesheet" href="./fate.css">
+  <script defer src="./os.js"></script>
+  <script defer src="./fate.js"></script>
+
+  <link rel="stylesheet" href="./workbench.css">
+  <script defer src="./workbench.js"></script>
+</head>
+<body class="deep">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="nav-logo" href="./" aria-label="Fate home">
+      <span class="fate-symbol" aria-hidden="true">✦</span>
+      <span>Fate</span>
+    </a>
+    <nav class="nav-links" aria-label="Site">
+      <a href="#fetch-fate">Evidence + Fate</a>
+      <a href="#loop">How it works</a>
+      <a href="#scenario">Run a scenario</a>
+      <a href="#uncertainty">Uncertainty</a>
+      <a href="#vision">Vision</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn--solid btn--sm" href="#workbench">Open workbench</a>
+      <button class="nav-burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="menu" aria-label="Mobile">
+  <a href="#fetch-fate">Evidence + Fate</a>
+  <a href="#loop">How it works</a>
+  <a href="#scenario">Run a scenario</a>
+  <a href="#uncertainty">Uncertainty</a>
+  <a href="#vision">Vision</a>
+  <a href="#workbench">Open workbench</a>
+</nav>
+
+<main id="main">
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero hero--fate" id="hero" aria-label="Introduction">
+    <div class="atmo" aria-hidden="true">
+      <div class="fog fog--deep" style="top:-25%;left:-15%"></div>
+      <div class="fog fog--silver" style="bottom:-30%;right:-20%;animation-delay:-9s"></div>
+      <div class="fog" style="top:25%;right:-25%;animation-delay:-16s"></div>
+      <svg class="ribbon-field ribbon-slow" viewBox="0 0 2000 1600" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="rg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#8e97b4" stop-opacity="0"/>
+            <stop offset="0.5" stop-color="#8e97b4" stop-opacity="0.16"/>
+            <stop offset="1" stop-color="#5468e8" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="rg2" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5468e8" stop-opacity="0"/>
+            <stop offset="0.5" stop-color="#7a8cf5" stop-opacity="0.2"/>
+            <stop offset="1" stop-color="#8e97b4" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path d="M-220,210 C260,340 620,90 1040,250 C1400,390 1760,190 2220,310" stroke="url(#rg2)" stroke-width="55"/>
+        <path d="M-220,520 C300,700 720,300 1120,560 C1440,770 1760,540 2220,630" stroke="url(#rg2)" stroke-width="70"/>
+        <path d="M-220,830 C320,690 680,970 1090,840 C1500,710 1840,900 2220,790" stroke="url(#rg1)" stroke-width="90"/>
+        <path d="M-220,1120 C220,930 520,1320 940,1090 C1330,880 1560,1030 2220,800" stroke="url(#rg1)" stroke-width="110"/>
+        <path d="M-220,1380 C420,1270 960,1500 1480,1330 C1820,1220 2000,1320 2220,1270" stroke="url(#rg1)" stroke-width="40"/>
+      </svg>
+    </div>
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <div class="hero-inner">
+      <a class="hero-badge" href="#fetch-fate">
+        <span class="hero-badge-tag">EVIDENCE + FATE</span>
+        <span class="hero-badge-text">A revenue decision system</span>
+        <span class="arr" aria-hidden="true">→</span>
+      </a>
+      <h1 class="display">Test revenue decisions<br><em>before you make them.</em></h1>
+      <p class="lede">Evidence describes what happened. Fate estimates what could happen next.</p>
+      <p class="hero-sub">Compare financing, discount, pilot and bundle scenarios using synthetic data or your own resolved sales records. Inspect the assumptions and uncertainty before designing a real-world test.</p>
+      <div class="cta-row">
+        <a class="btn btn--solid btn--lg" href="#scenario">Run a scenario <span class="arr">→</span></a>
+        <a class="btn btn--ghost btn--lg" href="#loop">See how it works</a>
+      </div>
+      <p class="hero-note">This interactive demo uses illustrative aggregate inputs. Fate is a transparent scenario engine — it shows ranges, assumptions and evidence strength, and abstains when the evidence can't support a decision.</p>
+    </div>
+
+    <!-- the shape of an answer: a question, a comparison, a range -->
+    <div class="hero-stage">
+      <div class="stage-glow" aria-hidden="true"></div>
+      <div class="window">
+        <div class="window-bar">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <span class="window-title">Fate — scenario estimate</span>
+          <span class="chip chip--warn window-status"><span class="dot"></span>EXPLORATORY</span>
+        </div>
+        <div class="window-body dcard">
+          <div class="dcard-q">
+            <p class="eyebrow">The decision</p>
+            <p class="q">“What happens if we offer 0% financing to price-sensitive prospects at proposal stage?”</p>
+          </div>
+          <div class="dcard-body">
+            <div class="dcard-left">
+              <div class="mpair">
+                <p class="mpair-cap">Current — observed</p>
+                <div class="mpair-row"><span class="mpair-k">Opportunities</span><span class="mpair-v">100</span></div>
+                <div class="mpair-row"><span class="mpair-k">Close rate</span><span class="mpair-v">12.0%</span></div>
+                <div class="mpair-row"><span class="mpair-k">Revenue</span><span class="mpair-v">$240,000</span></div>
+                <div class="mpair-row"><span class="mpair-k">Gross profit</span><span class="mpair-v">$108,000</span></div>
+              </div>
+              <div class="mpair">
+                <p class="mpair-cap">Scenario — modelled</p>
+                <div class="mpair-row"><span class="mpair-k">Close rate</span><span class="mpair-v is-up">14.6%</span></div>
+                <div class="mpair-row"><span class="mpair-k">Revenue</span><span class="mpair-v is-up">$300,000</span></div>
+                <div class="mpair-row"><span class="mpair-k">Gross profit</span><span class="mpair-v is-up">$124,500</span></div>
+                <div class="mpair-row"><span class="mpair-k">Margin</span><span class="mpair-v is-down">−3.5 pts</span></div>
+              </div>
+            </div>
+            <div class="dcard-right">
+              <div class="range">
+                <div class="range-head">
+                  <span class="range-label">Potential gross profit</span>
+                  <span class="range-mid">$125K</span>
+                </div>
+                <div class="range-rail">
+                  <span class="range-band" style="left:31.6%;width:55.3%"></span>
+                  <span class="range-tick" style="left:31.6%"></span>
+                  <span class="range-tick range-tick--mid" style="left:59.3%"></span>
+                  <span class="range-tick" style="left:87%"></span>
+                  <span class="range-base" style="left:51.4%"></span>
+                </div>
+                <div class="range-scale">
+                  <span><b>P10</b> $66.4K</span>
+                  <span><b>Today</b> $108K</span>
+                  <span><b>P90</b> $183K</span>
+                </div>
+              </div>
+              <div class="mpair">
+                <div class="mpair-row"><span class="mpair-k">Probability the change loses profit</span><span class="mpair-v">36%</span></div>
+                <div class="mpair-row"><span class="mpair-k">Evidence strength</span><span class="mpair-v">Low · 48 / 100</span></div>
+                <div class="mpair-row"><span class="mpair-k">Blended relative lift</span><span class="mpair-v">+21.7%</span></div>
+              </div>
+              <p class="note">Dashed line is today's gross profit. On this much evidence Fate labels the result exploratory — enough to shape a question, not to commit capital.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="chip chip--blue hero-float hero-float--a"><span class="dot"></span>1,000 seeded worlds</span>
+      <span class="chip hero-float hero-float--b"><span class="dot"></span>Evidence: 100 resolved opportunities</span>
+    </div>
+    <p class="ex-note" style="margin-top:1.4rem">Illustrative cohort. Introductory cards are examples; the interactive scenario below recomputes from its inputs.</p>
+  </section>
+
+  <!-- ======================= 1 · EVIDENCE + FATE ======================= -->
+  <section class="section" id="fetch-fate" aria-label="Evidence and Fate">
+    <div class="atmo" aria-hidden="true"><div class="fog fog--silver" style="top:0;left:-25%"></div></div>
+    <div class="wrap-wide z2">
+      <div class="section-head center" style="margin-inline:auto" data-reveal>
+        <p class="kicker kicker--bare">Two halves of one system</p>
+        <h2 class="h2">Evidence on one side.<br><em>Consequences on the other.</em></h2>
+      </div>
+
+      <div class="ff" style="margin-top:1rem">
+        <div class="ff-col" data-reveal>
+          <p class="eyebrow">01 — Ground truth</p>
+          <p class="ff-name">Evidence</p>
+          <p class="ff-verb">Observe what happened.</p>
+          <p>The evidence layer accepts normalized sales records through CSV. Connecting calls, CRM activity and commercial outcomes automatically is a future integration, not part of this release.</p>
+          <div class="rail" aria-label="Evidence fields">
+            <span class="rail-step"><span class="rail-pill">Calls</span></span>
+            <span class="rail-step"><span class="rail-pill">CRM activity</span></span>
+            <span class="rail-step"><span class="rail-pill">Offers</span></span>
+            <span class="rail-step"><span class="rail-pill">Objections</span></span>
+            <span class="rail-step"><span class="rail-pill">Follow-ups</span></span>
+            <span class="rail-step"><span class="rail-pill">Stages</span></span>
+            <span class="rail-step"><span class="rail-pill rail-pill--out">Won / lost</span></span>
+            <span class="rail-step"><span class="rail-pill rail-pill--out">Revenue &amp; margin</span></span>
+          </div>
+          <p>The valuable unit is not a transcript. It is <strong style="color:var(--ink);font-weight:500">behaviour + context + action + the eventual commercial outcome</strong> — the only shape of data you can actually learn a decision from.</p>
+          <div class="record" aria-label="A normalized evidence record">
+            <p class="mpair-cap">One normalised record</p>
+            <div class="mpair-row"><span class="mpair-k">Stage at decision</span><span class="mpair-v">Proposal</span></div>
+            <div class="mpair-row"><span class="mpair-k">Primary objection</span><span class="mpair-v">Price</span></div>
+            <div class="mpair-row"><span class="mpair-k">Offer presented</span><span class="mpair-v">None</span></div>
+            <div class="mpair-row"><span class="mpair-k">Deal value</span><span class="mpair-v">$20,000</span></div>
+            <div class="mpair-row"><span class="mpair-k">Gross margin</span><span class="mpair-v">45%</span></div>
+            <div class="mpair-row"><span class="mpair-k">Resolved outcome</span><span class="mpair-v" style="color:var(--risk)">Lost</span></div>
+            <p class="note">Every field is traceable to its source, and the record is only useful once the outcome has resolved.</p>
+          </div>
+        </div>
+
+        <div class="ff-rule" aria-hidden="true"></div>
+
+        <div class="ff-col ff-col--fate" data-reveal>
+          <p class="eyebrow">02 — Consequence</p>
+          <p class="ff-name">Fate</p>
+          <p class="ff-verb">Explore what could happen.</p>
+          <p>Change an offer, a price, a follow-up strategy, a market or a sales process — and compare plausible outcomes against the policy you run today.</p>
+          <div class="knobs" aria-label="What Fate lets you change">
+            <div class="knob"><span class="knob-k">Offer</span><span class="knob-track"><span class="knob-dot"></span></span><span class="knob-v">0% FINANCING</span></div>
+            <div class="knob"><span class="knob-k">Price</span><span class="knob-track"><span class="knob-dot"></span></span><span class="knob-v">−10%</span></div>
+            <div class="knob"><span class="knob-k">Follow-up</span><span class="knob-track"><span class="knob-dot"></span></span><span class="knob-v">CADENCE</span></div>
+            <div class="knob"><span class="knob-k">Sales process</span><span class="knob-track"><span class="knob-dot"></span></span><span class="knob-v">STAGE GATE</span></div>
+            <div class="knob"><span class="knob-k">Market</span><span class="knob-track"><span class="knob-dot"></span></span><span class="knob-v">SEGMENT</span></div>
+          </div>
+          <p>Fate returns conversion, revenue, gross profit, downside risk, segment differences and the uncertainty around all of it — with the assumptions and the evidence that produced each number kept in view.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 2 · FROM DATA TO DECISION ======================= -->
+  <section class="section" id="loop" aria-label="From data to decision">
+    <div class="atmo" aria-hidden="true"><div class="fog fog--deep" style="top:-10%;right:-20%"></div></div>
+    <div class="wrap-wide z2">
+      <div class="section-head center" style="margin-inline:auto" data-reveal>
+        <p class="kicker kicker--bare">From data to decision</p>
+        <h2 class="h2">A roadmap for closing the loop.</h2>
+        <p class="body-l muted" style="max-width:620px;margin:1.2rem auto 0">The current release simulates scenarios. Automatic collection, experiment registration and recalibration below are future work.</p>
+      </div>
+
+      <div class="loopfig" style="margin-top:1rem" data-reveal>
+        <div class="loop5">
+          <div class="loop-card">
+            <span class="loop-i">01</span>
+            <span class="loop-t">Observe</span>
+            <span class="loop-d">A future evidence collector captures commercial behaviour — calls, CRM activity, offers, objections, follow-ups and the outcome that resolved.</span>
+          </div>
+          <div class="loop-card">
+            <span class="loop-i">02</span>
+            <span class="loop-t">Learn</span>
+            <span class="loop-d">Actions get connected to resolved outcomes, with the economics attached: what was done, to whom, at what stage, and what it was worth.</span>
+          </div>
+          <div class="loop-card">
+            <span class="loop-i">03</span>
+            <span class="loop-t">Simulate</span>
+            <span class="loop-d">Fate evaluates an alternative decision against the current policy and returns a distribution of conversion, revenue and gross profit.</span>
+          </div>
+          <div class="loop-card">
+            <span class="loop-i">04</span>
+            <span class="loop-t">Validate</span>
+            <span class="loop-d">The estimate is recorded before the change ships. When the outcome resolves, prediction and reality are compared on the same cohort.</span>
+          </div>
+          <div class="loop-card">
+            <span class="loop-i">05</span>
+            <span class="loop-t">Improve</span>
+            <span class="loop-d">Recalibrate. Where the estimate was wrong, the interval widens; where it held, the system earns the right to speak more confidently.</span>
+          </div>
+        </div>
+        <div class="loop-back" aria-hidden="true">
+          <svg viewBox="0 0 1000 60" preserveAspectRatio="none">
+            <path class="dash-run" d="M962,2 L962,34 Q962,48 948,48 L52,48 Q38,48 38,34 L38,8"
+                  fill="none" stroke="var(--blue-soft)" stroke-opacity="0.5" stroke-width="1.5"/>
+            <path d="M38,2 L33,12 L43,12 Z" fill="var(--blue-soft)" fill-opacity="0.75"/>
+          </svg>
+          <p class="loop-back-label">Recalibrate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 3 · THE SCENARIO ENGINE ======================= -->
+  <section class="section" id="scenario" aria-label="Example scenario">
+    <div class="atmo" aria-hidden="true"><div class="fog fog--silver" style="bottom:-20%;left:-20%"></div></div>
+    <div class="wrap-wide z2">
+      <div class="section-head center" style="margin-inline:auto" data-reveal>
+        <p class="kicker kicker--bare">A worked scenario</p>
+        <h2 class="h2">“What if we offer 0% financing<br><em>to price-sensitive prospects?”</em></h2>
+        <p class="body-l muted" style="max-width:660px;margin:1.2rem auto 0">Change the offer and the size of the evidence base below. Everything on the right recomputes — including whether Fate thinks it should answer at all.</p>
+      </div>
+
+      <div class="sim" style="margin-top:1rem" data-reveal>
+        <!-- ---------- inputs ---------- -->
+        <div class="sim-panel">
+          <div class="sim-field">
+            <p class="eyebrow">The intervention</p>
+            <div class="sim-opts" id="sim-offers" role="group" aria-label="Choose an offer">
+              <button type="button" class="sim-opt" data-offer="financing" aria-pressed="true">
+                <span class="sim-opt-t">0% financing</span>
+                <span class="sim-opt-d">LIFT PRIOR 25% · MARGIN −3.5 PTS</span>
+              </button>
+              <button type="button" class="sim-opt" data-offer="discount" aria-pressed="false">
+                <span class="sim-opt-t">10% discount</span>
+                <span class="sim-opt-d">LIFT PRIOR 34% · REVENUE ×0.90</span>
+              </button>
+              <button type="button" class="sim-opt" data-offer="trial" aria-pressed="false">
+                <span class="sim-opt-t">30-day pilot</span>
+                <span class="sim-opt-d">LIFT PRIOR 18% · REVENUE ×0.96</span>
+              </button>
+              <button type="button" class="sim-opt" data-offer="bundle" aria-pressed="false">
+                <span class="sim-opt-t">Implementation bundle</span>
+                <span class="sim-opt-d">LIFT PRIOR 14% · REVENUE ×1.06</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="sim-field">
+            <p class="eyebrow">The population</p>
+            <div class="sim-slider">
+              <div class="sim-slider-head">
+                <label class="mpair-k" for="sim-pop">Matching opportunities</label>
+                <span class="sim-slider-v" id="sim-pop-v">100</span>
+              </div>
+              <input class="sim-range" type="range" id="sim-pop" min="6" max="400" step="1" value="100"
+                     aria-describedby="sim-pop-note">
+              <p class="note" id="sim-pop-note">Price-sensitive · proposal stage · last 12 months</p>
+            </div>
+            <div class="sim-slider">
+              <div class="sim-slider-head">
+                <label class="mpair-k" for="sim-rate">Observed close rate</label>
+                <span class="sim-slider-v" id="sim-rate-v">12.0%</span>
+              </div>
+              <input class="sim-range" type="range" id="sim-rate" min="2" max="40" step="0.5" value="12">
+            </div>
+            <div class="sim-slider">
+              <div class="sim-slider-head">
+                <label class="mpair-k" for="sim-deal">Average won deal</label>
+                <span class="sim-slider-v" id="sim-deal-v">$20,000</span>
+              </div>
+              <input class="sim-range" type="range" id="sim-deal" min="2000" max="80000" step="1000" value="20000">
+            </div>
+          </div>
+
+          <div class="mix">
+            <p class="eyebrow">Evidence mix</p>
+            <div class="mix-bar" role="img" aria-label="Share of the estimate drawn from company, industry and synthetic evidence" id="sim-mix">
+              <span class="mix-seg mix-seg--co" style="width:50%"></span>
+              <span class="mix-seg mix-seg--ind" style="width:35%"></span>
+              <span class="mix-seg mix-seg--syn" style="width:15%"></span>
+            </div>
+            <p class="mix-key">
+              <span><i class="mix-seg--co" style="background:linear-gradient(90deg,#7a8cf5,#9aa8ff)"></i><span id="sim-mix-co">50%</span> COMPANY</span>
+              <span><i style="background:rgba(170,180,210,.45)"></i><span id="sim-mix-ind">35%</span> INDUSTRY</span>
+              <span><i style="background:repeating-linear-gradient(135deg,rgba(215,163,74,.55) 0 4px,rgba(215,163,74,.2) 4px 8px)"></i><span id="sim-mix-syn">15%</span> SYNTHETIC</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- ---------- outputs ---------- -->
+        <div class="sim-out">
+          <div class="sim-grid">
+            <div class="sim-col">
+              <p class="mpair-cap">Current policy — observed</p>
+              <div>
+                <p class="sim-big" id="out-base-rev">$240,000</p>
+                <p class="eyebrow">REVENUE</p>
+              </div>
+              <div class="mpair">
+                <div class="mpair-row"><span class="mpair-k">Close rate</span><span class="mpair-v" id="out-base-rate">12.0%</span></div>
+                <div class="mpair-row"><span class="mpair-k">Conversions</span><span class="mpair-v" id="out-base-conv">12</span></div>
+                <div class="mpair-row"><span class="mpair-k">Gross profit</span><span class="mpair-v" id="out-base-gp">$108,000</span></div>
+              </div>
+            </div>
+            <div class="sim-col sim-col--scn">
+              <p class="mpair-cap">Scenario — modelled</p>
+              <div>
+                <p class="sim-big" id="out-scn-rev">$300,000</p>
+                <p class="eyebrow">REVENUE · <span class="sim-delta is-up" id="out-scn-rev-d">+$60,000</span></p>
+              </div>
+              <div class="mpair">
+                <div class="mpair-row"><span class="mpair-k">Close rate</span><span class="mpair-v is-up" id="out-scn-rate">15.0%</span></div>
+                <div class="mpair-row"><span class="mpair-k">Conversions</span><span class="mpair-v is-up" id="out-scn-conv">15</span></div>
+                <div class="mpair-row"><span class="mpair-k">Gross profit</span><span class="mpair-v is-up" id="out-scn-gp">$124,500</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sim-col">
+            <div class="range">
+              <div class="range-head">
+                <span class="range-label">Potential gross profit — 1,000 seeded worlds</span>
+                <span class="range-mid" id="out-p50">$124.5K</span>
+              </div>
+              <div class="range-rail">
+                <span class="range-band" id="out-band" style="left:18%;width:56%"></span>
+                <span class="range-tick" id="out-t10" style="left:18%"></span>
+                <span class="range-tick range-tick--mid" id="out-t50" style="left:46%"></span>
+                <span class="range-tick" id="out-t90" style="left:74%"></span>
+                <span class="range-base" id="out-tbase" style="left:30%"></span>
+              </div>
+              <div class="range-scale">
+                <span><b>P10</b> <span id="out-p10">$92K</span></span>
+                <span><b>Today</b> <span id="out-pbase">$108K</span></span>
+                <span><b>P90</b> <span id="out-p90">$159K</span></span>
+              </div>
+            </div>
+            <div class="mpair" style="margin-top:1rem">
+              <div class="mpair-row"><span class="mpair-k">Probability the change loses gross profit</span><span class="mpair-v" id="out-downside">23%</span></div>
+              <div class="mpair-row"><span class="mpair-k">Evidence strength</span><span class="mpair-v" id="out-conf">Medium · 68 / 100</span></div>
+              <div class="mpair-row"><span class="mpair-k">Blended relative lift</span><span class="mpair-v" id="out-lift">+25.0%</span></div>
+              <div class="mpair-row"><span class="mpair-k">Sensitivity at 0.5× / 1.5× lift</span><span class="mpair-v" id="out-sens">$116K / $133K</span></div>
+            </div>
+          </div>
+
+          <div class="readiness" id="out-readiness" data-state="directional" role="status">
+            <p class="readiness-t" id="out-readiness-t">Directional</p>
+            <p class="readiness-d" id="out-readiness-d">Enough resolved evidence to compare options and size a test. Not enough to call this a measured effect — run a controlled rollout before committing capital.</p>
+          </div>
+
+          <div class="sim-meta">
+            <p class="eyebrow">Assumptions behind this estimate</p>
+            <ul class="sim-assume" id="out-assume">
+              <li>Relative lift is a blended prior, not a measured treatment effect.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="honest" style="margin-top:2.4rem" data-reveal>
+        <p><strong>What this is.</strong> A transparent scenario calculation: your cohort, an explicit offer definition, deterministic revenue and margin arithmetic, and a seeded outcome distribution. Same inputs, same result, every time.</p>
+        <p><strong>What it is not.</strong> Not a prediction, not a proven causal effect, and not evidence that the offer <em>caused</em> the lift. The interval propagates uncertainty in the baseline rate and the lift assumption — not in deal value, timing, seasonality, seller effects or capacity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 4 · NOT ANOTHER AI AGENT ======================= -->
+  <section class="section" id="positioning" aria-label="Not just another AI agent">
+    <div class="atmo" aria-hidden="true"><div class="fog fog--deep" style="top:10%;right:-25%"></div></div>
+    <div class="wrap z2">
+      <div class="section-head" data-reveal>
+        <p class="kicker kicker--bare">Positioning</p>
+        <p class="statement">AI can write the email.<span>The harder question is whether you should change the offer at all.</span></p>
+        <p class="body-l muted" style="max-width:640px;margin-top:1.4rem">Most AI tools help execute work faster. Fate is built for the decision above the work — the one that determines whether the work was worth doing. That requires a different architecture, and a strict division of labour. The live connectors described below are an architectural roadmap; this release accepts CSV and synthetic data.</p>
+      </div>
+
+      <div class="roles" style="margin-top:2.6rem" data-reveal data-stagger="0.06">
+        <div class="role">
+          <p class="role-who">Language models <em style="font-style:italic;color:var(--blue-soft)">interpret.</em></p>
+          <p class="role-does">Read transcripts, objections and interactions. Compile a scenario written in plain English into a structured, typed intervention.</p>
+          <p class="role-not"><b>Never</b>Invent a conversion rate, an effect size, or any financial input.</p>
+        </div>
+        <div class="role">
+          <p class="role-who">Statistical models <em style="font-style:italic;color:var(--blue-soft)">estimate.</em></p>
+          <p class="role-does">Produce probabilities and effect sizes from resolved outcomes, with intervals, coverage and the segments they actually support.</p>
+          <p class="role-not"><b>Never</b>Hide unsupported extrapolation behind a confident point estimate.</p>
+        </div>
+        <div class="role">
+          <p class="role-who">Deterministic software <em style="font-style:italic;color:var(--blue-soft)">calculates.</em></p>
+          <p class="role-does">Revenue, margin, discount, financing cost and gross profit — versioned, reproducible, and auditable line by line.</p>
+          <p class="role-not"><b>Never</b>Call a language model to do arithmetic.</p>
+        </div>
+        <div class="role">
+          <p class="role-who">Reality <em style="font-style:italic;color:var(--blue-soft)">validates.</em></p>
+          <p class="role-does">The decision ships, the outcome resolves, and the estimate is scored against what actually happened on that exact cohort.</p>
+          <p class="role-not"><b>Never</b>Treat a fluent simulation as evidence that it was right.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 5 · THE CLOSED LOOP ======================= -->
+  <section class="section" id="closed-loop" aria-label="The closed-loop advantage">
+    <div class="atmo" aria-hidden="true"><div class="fog fog--silver" style="top:0;right:-25%"></div></div>
+    <div class="wrap-wide z2">
+      <div class="section-head center" style="margin-inline:auto" data-reveal>
+        <p class="kicker kicker--bare">The closed loop</p>
+        <h2 class="h2">Every decision you make<br><em>becomes evidence.</em></h2>
+        <p class="body-l muted" style="max-width:660px;margin:1.2rem auto 0">A prediction is registered before the change ships. The outcome resolves against the same cohort. The gap between them is the only thing that makes the next estimate better.</p>
+      </div>
+
+      <div class="ledger" style="margin-top:1rem" data-reveal>
+        <div class="ledger-head">
+          <span>Decision</span>
+          <span>Predicted</span>
+          <span>Actual</span>
+          <span>Calibration</span>
+          <span>Status</span>
+        </div>
+        <div class="ledger-row">
+          <span data-l="Decision"><b>0% financing</b> · price-sensitive · proposal</span>
+          <span data-l="Predicted" class="ledger-n">+$16.5K GP</span>
+          <span data-l="Actual" class="ledger-n">+$14.1K GP</span>
+          <span data-l="Calibration">Inside P10–P90</span>
+          <span data-l="Status"><span class="chip chip--good"><span class="dot"></span>RESOLVED</span></span>
+        </div>
+        <div class="ledger-row">
+          <span data-l="Decision"><b>10% discount</b> · SMB · negotiation</span>
+          <span data-l="Predicted" class="ledger-n">+$9.2K GP</span>
+          <span data-l="Actual" class="ledger-n">−$2.8K GP</span>
+          <span data-l="Calibration">Below P10 · lift over-stated</span>
+          <span data-l="Status"><span class="chip chip--risk"><span class="dot"></span>MISSED</span></span>
+        </div>
+        <div class="ledger-row">
+          <span data-l="Decision"><b>Same-day follow-up</b> · inbound · discovery</span>
+          <span data-l="Predicted" class="ledger-n">+$21.0K GP</span>
+          <span data-l="Actual" class="ledger-n">+$23.4K GP</span>
+          <span data-l="Calibration">Inside P10–P90</span>
+          <span data-l="Status"><span class="chip chip--good"><span class="dot"></span>RESOLVED</span></span>
+        </div>
+        <div class="ledger-row ledger-row--open">
+          <span data-l="Decision"><b>Implementation bundle</b> · mid-market · proposal</span>
+          <span data-l="Predicted" class="ledger-n">+$11.8K GP</span>
+          <span data-l="Actual" class="ledger-n">—</span>
+          <span data-l="Calibration">Outcome window open</span>
+          <span data-l="Status"><span class="chip"><span class="dot"></span>PENDING</span></span>
+        </div>
+      </div>
+      <p class="ex-note" style="margin-top:1rem">Illustrative ledger. A missed prediction is kept and scored — it is the most valuable row in the table.</p>
+
+      <div class="honest" style="margin-top:2.4rem" data-reveal>
+        <p><strong>The moat is not the number of AI agents, or the number of synthetic simulations.</strong> Running more simulated worlds reduces sampling noise; it does not remove bias, and it cannot establish that a change caused an outcome.</p>
+        <p>What compounds instead is a growing dataset connecting four things that almost nobody stores together: <strong>what we knew → what we predicted → what action was taken → what actually happened.</strong> That is the asset, and it can only be built one resolved decision at a time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 6 · UNCERTAINTY ======================= -->
+  <section class="section" id="uncertainty" aria-label="Trust and uncertainty">
+    <div class="atmo" aria-hidden="true"><div class="fog fog--deep" style="bottom:-30%;left:-15%"></div></div>
+    <div class="wrap-wide z2">
+      <div class="section-head center" style="margin-inline:auto" data-reveal>
+        <p class="kicker kicker--bare">Uncertainty</p>
+        <h2 class="h2">Sometimes the right answer<br><em>is: we don't know yet.</em></h2>
+        <p class="body-l muted" style="max-width:640px;margin:1.2rem auto 0">A system that expresses precision where the evidence is thin is worse than no system. Fate is built to say so — and saying so is the feature, not the limitation.</p>
+      </div>
+
+      <div class="gates" style="margin-top:1rem" data-reveal data-stagger="0.08">
+        <div class="gate gate--abstain">
+          <p class="gate-t">Abstain</p>
+          <p class="gate-when">&lt; 10 opportunities, or &lt; 2 resolved wins</p>
+          <p class="gate-d">Fate refuses to produce an estimate and tells you what evidence is missing. There is no number here worth showing.</p>
+        </div>
+        <div class="gate gate--exploratory">
+          <p class="gate-t">Exploratory</p>
+          <p class="gate-when">Thin cohort, or evidence leaning on priors</p>
+          <p class="gate-d">The arithmetic runs, but the result is for shaping a question — not allocating capital. The recommended next step is to design a controlled test.</p>
+        </div>
+        <div class="gate gate--directional">
+          <p class="gate-t">Directional</p>
+          <p class="gate-when">Sufficient resolved outcomes in the cohort</p>
+          <p class="gate-d">Strong enough to compare options, size a test and rank interventions. Still an estimate under a stated assumption, not a measured effect.</p>
+        </div>
+      </div>
+
+      <p class="center muted" style="margin:2.6rem auto 1.6rem;max-width:44em;font-size:.95rem" data-reveal>Without evidence from a controlled experiment, Fate caps its own confidence score. High confidence is something the system has to earn from reality, not assert.</p>
+
+      <ul class="does" data-reveal>
+        <li>Expose every assumption behind the number</li>
+        <li>Show ranges instead of false precision</li>
+        <li>Report evidence strength and where it came from</li>
+        <li>Separate company, industry and synthetic evidence</li>
+        <li>Flag populations the evidence doesn't support</li>
+        <li>Abstain when the evidence can't carry a decision</li>
+        <li>Recommend an experiment when one is needed</li>
+        <li>Export complete result snapshots for inspection</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================= 7 · PRODUCT VISION ======================= -->
+  <section class="section" id="vision" aria-label="Product vision">
+    <div class="wrap z2">
+      <div class="section-head center" style="margin-inline:auto" data-reveal>
+        <p class="kicker kicker--bare">Where this goes</p>
+        <h2 class="h2">Each step has to be earned<br><em>before we claim the next one.</em></h2>
+        <p class="body-l muted" style="max-width:600px;margin:1.2rem auto 0">The ambition is a decision system. The discipline is refusing to describe it as one before the evidence says so.</p>
+      </div>
+
+      <div class="ladder" style="margin-top:1rem" data-reveal data-stagger="0.07">
+        <div class="rung rung--now">
+          <span class="rung-i">STAGE 01</span>
+          <span class="rung-main">
+            <span class="rung-t">Scenario</span>
+            <span class="rung-q">“What if?”</span>
+          </span>
+          <span class="rung-mark">Today</span>
+        </div>
+        <div class="rung">
+          <span class="rung-i">STAGE 02</span>
+          <span class="rung-main">
+            <span class="rung-t">Predict</span>
+            <span class="rung-q">“What is likely?”</span>
+          </span>
+          <span class="rung-mark">Calibrated models</span>
+        </div>
+        <div class="rung">
+          <span class="rung-i">STAGE 03</span>
+          <span class="rung-main">
+            <span class="rung-t">Understand</span>
+            <span class="rung-q">“What actually changes the outcome?”</span>
+          </span>
+          <span class="rung-mark">Causal estimation</span>
+        </div>
+        <div class="rung">
+          <span class="rung-i">STAGE 04</span>
+          <span class="rung-main">
+            <span class="rung-t">Decide</span>
+            <span class="rung-q">“Which action produces the best expected business result?”</span>
+          </span>
+          <span class="rung-mark">Policy comparison</span>
+        </div>
+        <div class="rung">
+          <span class="rung-i">STAGE 05</span>
+          <span class="rung-main">
+            <span class="rung-t">Learn</span>
+            <span class="rung-q">“Did reality match the prediction?”</span>
+          </span>
+          <span class="rung-mark">Continuous</span>
+        </div>
+      </div>
+
+      <p class="center muted" style="margin-top:2.2rem;max-width:42em;margin-inline:auto;font-size:.875rem" data-reveal>Stages two through five are the roadmap, not the product. We will say when each one arrives, and we will show the evaluation that justified it.</p>
+    </div>
+  </section>
+
+  <!-- ======================= FINAL CTA ======================= -->
+  <section class="section" aria-label="Get started">
+    <div class="atmo" aria-hidden="true">
+      <div class="fog fog--deep" style="top:-10%;left:20%"></div>
+      <div class="fog fog--silver" style="bottom:-40%;right:-10%"></div>
+    </div>
+    <div class="wrap center z2" style="display:grid;justify-items:center;gap:1.6rem">
+      <span class="fate-symbol" aria-hidden="true">✦</span>
+      <h2 class="display" style="font-size:clamp(2.2rem,5vw,4.2rem)" data-reveal>Before you change the offer,<br>price, market or process —<br><em>test the decision.</em></h2>
+      <p class="lede" data-reveal>Explore the demo, then use the workbench to run the engine on synthetic records or your own CSV. No account or API key required.</p>
+      <div class="cta-row" style="justify-content:center" data-reveal>
+        <a class="btn btn--solid btn--lg" href="#workbench">Open the workbench <span class="arr">→</span></a>
+        <a class="btn btn--ghost btn--lg" href="#scenario">Run a scenario</a>
+      </div>
+    </div>
+  </section>
+<section class="section" id="workbench" aria-labelledby="workbench-title"><div class="wrap">
+<p class="kicker">Fate workbench</p><h2 class="display" id="workbench-title">Bring your evidence.<br><em>Inspect the tradeoff.</em></h2>
+<p class="lede">Run the full engine on a generated demo or import resolved opportunity records. This workbench requires the included local server; the interactive demo above also works as a static site.</p>
+<form id="run-form" class="workbench-form">
+<label>Data source<select id="data-source"><option value="demo">Synthetic demo · 480 generated leads</option><option value="csv">Your CSV</option></select></label>
+<label>CSV file<input type="file" id="csv-file" accept=".csv,text/csv"></label>
+<label>Offer<select id="api-offer"><option value="financing">0% financing</option><option value="discount">10% discount</option><option value="trial">30-day pilot</option><option value="bundle">Implementation bundle</option></select></label>
+<label>Objection<select id="api-objection"><option value="all">All objections</option><option value="cost">Cost</option><option value="timing">Timing</option><option value="trust">Trust</option><option value="authority">Authority</option><option value="need">Need</option><option value="none">None recorded</option></select></label>
+<label>Region<select id="api-region"><option value="all">All regions</option><option>Northeast</option><option>Southeast</option><option>Midwest</option><option>West</option><option>Unknown</option></select></label>
+<label>Segment<select id="api-segment"><option value="all">All segments</option><option>SMB</option><option>Mid-market</option><option>Enterprise</option><option>Unknown</option></select></label>
+<label>Lookback in months<input id="api-months" type="number" min="1" max="60" value="12" required></label>
+<label>Scenario<input id="api-scenario" maxlength="500" value="Compare the offer against historical outcomes" required></label>
+<label class="save-choice"><input type="checkbox" id="api-save"> Save this result on this computer</label>
+<div class="cta-row"><button class="btn btn--solid" id="run-submit">Run simulation →</button><button type="button" class="btn btn--ghost" id="download-template">CSV template</button><button type="button" class="btn btn--ghost" id="load-history">Saved runs</button></div>
+</form><p id="api-status" role="status" aria-live="polite">Ready. Demo inputs are synthetic; imported CSV stays with your local server.</p>
+<div id="api-result" hidden></div><div id="api-history"></div>
+</div></section>
+</main>
+
+<footer class="footer"><div class="wrap footer-inner"><p>Fate · Revenue scenario planning</p><p>Prototype software. All demo figures and priors are illustrative. No CRM connections or certification claims.</p><a href="#workbench">Workbench</a> · <a href="#scenario">Interactive demo</a></div></footer>
+
+</body>
+</html>
